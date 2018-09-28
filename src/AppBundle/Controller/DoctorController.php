@@ -24,15 +24,6 @@ use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
  */
 class DoctorController extends Controller
 {
-
-    /**
-     * @Route("/info", name="info_doctor")
-     */
-    public function indexAction(Request $request)
-    {
-        return new response("<h1>fzzzzz</h1>");
-
-    }
     /**
      * @Route("/addinfo", name="add_info_doctor")
      * @Security("has_role('ROLE_DOCTOR')")

@@ -123,11 +123,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         not_homepage:
 
         if (0 === strpos($pathinfo, '/doctor')) {
-            // info_doctor
-            if ('/doctor/info' === $pathinfo) {
-                return array (  '_controller' => 'AppBundle\\Controller\\DoctorController::indexAction',  '_route' => 'info_doctor',);
-            }
-
             if (0 === strpos($pathinfo, '/doctor/add')) {
                 // add_info_doctor
                 if ('/doctor/addinfo' === $pathinfo) {
@@ -267,11 +262,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
 
             elseif (0 === strpos($pathinfo, '/pharmacy')) {
-                // info_pharmacy
-                if ('/pharmacy/info' === $pathinfo) {
-                    return array (  '_controller' => 'AppBundle\\Controller\\PharmacyController::indexAction',  '_route' => 'info_pharmacy',);
-                }
-
                 if (0 === strpos($pathinfo, '/pharmacy/add')) {
                     // add_info_pharmacy
                     if ('/pharmacy/addinfo' === $pathinfo) {
@@ -434,11 +424,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         elseif (0 === strpos($pathinfo, '/supplier')) {
-            // info_supplier
-            if ('/supplier/info' === $pathinfo) {
-                return array (  '_controller' => 'AppBundle\\Controller\\SupplierController::indexAction',  '_route' => 'info_supplier',);
-            }
-
             // add_info_supplier
             if ('/supplier/addinfo' === $pathinfo) {
                 return array (  '_controller' => 'AppBundle\\Controller\\SupplierController::addInfoAction',  '_route' => 'add_info_supplier',);

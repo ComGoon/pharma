@@ -46,7 +46,7 @@ class __TwigTemplate_791f8378efe9c4d394d4606d0d5dcb28bdcbb40209a3eec041bb1c04d34
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Stock";
+        echo "Stock pharmacie";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -98,7 +98,7 @@ class __TwigTemplate_791f8378efe9c4d394d4606d0d5dcb28bdcbb40209a3eec041bb1c04d34
             foreach ($context['_seq'] as $context["_key"] => $context["pharmacyStock"]) {
                 // line 23
                 echo "        <tr>
-            <td width=\"15%\" style=\"text-align: center\"\">";
+            <td width=\"15%\" style=\"text-align: center\">";
                 // line 24
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["pharmacyStock"], "medications", array()), "name", array()), "html", null, true);
                 echo "</td>
@@ -162,9 +162,11 @@ class __TwigTemplate_791f8378efe9c4d394d4606d0d5dcb28bdcbb40209a3eec041bb1c04d34
     ";
         }
         // line 61
-        echo "        <a href=\"";
+        echo "    <br>
+        <a href=\"";
+        // line 62
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("stock_pharmacy_add", array("PharmacyID" => ($context["id"] ?? $this->getContext($context, "id")))), "html", null, true);
-        echo "\">add</a>
+        echo "\" class=\"style-button-order\">Ajouter des médicament</a>
 
     ";
         
@@ -187,7 +189,7 @@ class __TwigTemplate_791f8378efe9c4d394d4606d0d5dcb28bdcbb40209a3eec041bb1c04d34
 
     public function getDebugInfo()
     {
-        return array (  165 => 61,  161 => 59,  157 => 57,  127 => 33,  119 => 28,  115 => 27,  111 => 26,  107 => 25,  103 => 24,  100 => 23,  95 => 22,  93 => 21,  80 => 10,  75 => 9,  73 => 8,  70 => 7,  68 => 6,  59 => 5,  41 => 3,  11 => 1,);
+        return array (  168 => 62,  165 => 61,  161 => 59,  157 => 57,  127 => 33,  119 => 28,  115 => 27,  111 => 26,  107 => 25,  103 => 24,  100 => 23,  95 => 22,  93 => 21,  80 => 10,  75 => 9,  73 => 8,  70 => 7,  68 => 6,  59 => 5,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -202,7 +204,7 @@ class __TwigTemplate_791f8378efe9c4d394d4606d0d5dcb28bdcbb40209a3eec041bb1c04d34
     {
         return new Twig_Source("{% extends '@App/layout.html.twig' %}
 
-{% block title %}Stock{% endblock %}
+{% block title %}Stock pharmacie{% endblock %}
 
 {% block body %}
     {#{{ dump(stock) }}#}
@@ -223,7 +225,7 @@ class __TwigTemplate_791f8378efe9c4d394d4606d0d5dcb28bdcbb40209a3eec041bb1c04d34
         {#{{ dump(stock[0]) }}#}
     {% for pharmacyStock in stock %}
         <tr>
-            <td width=\"15%\" style=\"text-align: center\"\">{{ pharmacyStock.medications.name}}</td>
+            <td width=\"15%\" style=\"text-align: center\">{{ pharmacyStock.medications.name}}</td>
             <td width=\"30%\" >{{ pharmacyStock.medications.description}}</td>
             <td width=\"10%\" style=\"text-align: center\">{{ pharmacyStock.medications.manufacturer}}</td>
             <td style=\"text-align: center\">{{ pharmacyStock.price}} DT</td>
@@ -260,7 +262,8 @@ class __TwigTemplate_791f8378efe9c4d394d4606d0d5dcb28bdcbb40209a3eec041bb1c04d34
     {% else %}
         <h2>Pas de medicaments dans votre stock</h2>
     {% endif %}
-        <a href=\"{{ path('stock_pharmacy_add',{'PharmacyID':id}) }}\">add</a>
+    <br>
+        <a href=\"{{ path('stock_pharmacy_add',{'PharmacyID':id}) }}\" class=\"style-button-order\">Ajouter des médicament</a>
 
     {#{{ dump(stock[0]) }}#}
 {% endblock %}

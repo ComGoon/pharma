@@ -86,7 +86,7 @@ class __TwigTemplate_c98851e0c1dcc1c3332844db8e8ec612400d053dc9e9b5a927946cae139
         echo "    <div class=\"row\" >
 
         <div class=\" col-lg-4 \">
-            <h2>Send</h2>
+            <h2>Envoyer la liste des médicaments</h2>
 
             ";
         // line 12
@@ -143,7 +143,7 @@ class __TwigTemplate_c98851e0c1dcc1c3332844db8e8ec612400d053dc9e9b5a927946cae139
     <div class=\"row\" >
 
         <div class=\" col-lg-4 \">
-            <h2>Send</h2>
+            <h2>Envoyer la liste des médicaments</h2>
 
             {{ form(form) }}
             {#<a href=\"{{ path('Cancel_Order',{'id':id}) }}\">cancel</a>#}

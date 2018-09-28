@@ -25,7 +25,7 @@ class SupplierOrder
     /**
      * @var int
      *
-     * @ORM\Column(name="reference", type="integer", unique=true)
+     * @ORM\Column(name="reference", type="string", unique=true)
      */
     private $reference;
 

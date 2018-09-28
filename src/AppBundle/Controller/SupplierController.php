@@ -26,14 +26,6 @@ class SupplierController extends Controller
 {
 
     /**
-     * @Route("/info", name="info_supplier")
-     */
-    public function indexAction(Request $request)
-    {
-        return new response("<h1>fzzzzz</h1>");
-
-    }
-    /**
      * @Route("/addinfo", name="add_info_supplier")
      * @Security("has_role('ROLE_SUPPLIER')")
      */
@@ -65,7 +57,7 @@ class SupplierController extends Controller
 
     /**
      * @Route("/editinfo", name="edit_info_supplier")
-     * @Security("has_role('ROLE_SUPPLIER)")
+     * @Security("has_role('ROLE_SUPPLIER')")
      */
     public function editInfoAction(Request $request)
     {

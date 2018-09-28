@@ -94,7 +94,7 @@
 {#{% endblock %}#}
 
 {% extends '@App/layout.html.twig' %}
-{% block title %}Confirmation ordonance{% endblock %}
+{% block title %}liste médicaments pharmacy{% endblock %}
 
 {% block body %}
     <div class="col-lg-6 offset-5-lg">
@@ -167,6 +167,7 @@
                 {% endif %}
             {% endif %}
         {% endfor %}
+    </div>
     {% endblock %}
     {% block js %}
         <script type="text/javascript">
@@ -205,5 +206,5 @@
                 });
             });
         </script>
-    </div>
+
 {% endblock %}

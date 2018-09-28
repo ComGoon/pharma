@@ -28,14 +28,6 @@ class PharmacyController extends Controller
 {
 
     /**
-     * @Route("/info", name="info_pharmacy")
-     */
-    public function indexAction(Request $request)
-    {
-        return new response("<h1>fzzzzz</h1>");
-
-    }
-    /**
      * @Route("/addinfo", name="add_info_pharmacy")
      * @Security("has_role('ROLE_PHARMACY')")
      */
@@ -280,6 +272,7 @@ class PharmacyController extends Controller
      * @Security("has_role('ROLE_PHARMACY')")
      */
     public function createPrescriptionAction(){
+
         $em=$this->getDoctrine()->getManager();
         $repoPharmacy=$this->getDoctrine()->getRepository('AppBundle:Pharmacy');
         $pharmacy=$repoPharmacy->findOneByUser($this->getUser());
@@ -293,10 +286,11 @@ class PharmacyController extends Controller
             $em->flush();
         }
         $Order=new SupplierOrder();
-        $Order->setDateAdd(new \DateTime("NOW"));
+        $date = new \DateTime();
+        $Order->setDateAdd($date);
 //        $Order->setDoctor(null);
         $random = md5(((FLOAT)microtime())*950000);
-        $Order->setReference(abs($random));
+        $Order->setReference($random);
         $Order->setStatus('en attente');
         $Order->setPharmacy($pharmacy);
         $Order->setSupplier(null);

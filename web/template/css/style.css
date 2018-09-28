@@ -101,6 +101,7 @@ button:focus {
 .p_120 {
   padding-top: 25px;
   padding-bottom: 15px;
+  margin-bottom: 0px;
 }
 
 .pad_top {
@@ -4289,7 +4290,8 @@ h6 {
  }
 
  .height-body{
-   min-height: 266px;
+   min-height: 300px;
+   margin-bottom: 60px;
  }
  .style-button{
    color: white;
@@ -4315,4 +4317,4 @@ h6 {
   text-decoration:none;
   border: 1px solid #1c7430;
   color: #1c7430;
-}              
+}

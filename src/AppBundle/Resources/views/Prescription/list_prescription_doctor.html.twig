@@ -168,6 +168,7 @@
 
 {% extends '@App/layout.html.twig' %}
 {% block body %}
+    {% block title %}Liste ordonnance docteur{% endblock %}
     {% block modal %}
         <!-- Modal -->
         <div class="modal fade" id="prescription" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -191,19 +192,6 @@
             <form class="form-inline">
                 <input class="form-control mr-sm-2 search-bar" type="search" placeholder="Chercher une ordonnance" aria-label="Search">
             </form>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Status
-                </button>
-
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="{{ path('doctor_prescriptions_by_status', {'status': 'canceled'}) }}">Annulée</a>
-                    {#<a class="dropdown-item" href="{{ path('patient_prescriptions_by_status', {'status': 'ongoing'}) }}">En cours de traitement</a>#}
-                    <a class="dropdown-item" href="{{ path('doctor_prescriptions_by_status', {'status': 'delivred'}) }}">en attente</a>
-                    <a class="dropdown-item" href="{{ path('doctor_prescriptions_by_status', {'status': 'pending'}) }}">Non Confirmée</a>
-                    <a class="dropdown-item" href="{{ path('doctor_prescriptions_by_status', {'status': 'success'}) }}">Confirmée</a>
-                </div>
-            </div>
         </nav>
         <table class="table table-striped">
             <thead>
@@ -211,7 +199,6 @@
                 <th scope="col">Reference</th>
                 <th scope="col">Patient</th>
                 <th scope="col">Pharmacie</th>
-                <th scope="col">Docteur</th>
                 <th scope="col">Date d'ajout</th>
                 <th scope="col">Status</th>
                 <th scope="col">Action</th>
@@ -228,7 +215,6 @@
                         {% else %}
                             <th>Non choisie</th>
                         {% endif %}
-                        <th>{{ prescription.doctor.user.firstName }} {{ prescription.doctor.user.name }}</th>
                         <th>{{ prescription.dateAdd|date("d/m/Y")  }}</th>
                         <th>
                             {% if prescription.status == "Non confirmée" %}

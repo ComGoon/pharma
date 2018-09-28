@@ -46,7 +46,7 @@ class __TwigTemplate_cf37d87e0608cca8b2ec315155608e24e56286ca498197b062179dd1c9d
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        echo "PROFIL FORNISSEUR";
+        echo "PROFIL";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -104,7 +104,7 @@ class __TwigTemplate_cf37d87e0608cca8b2ec315155608e24e56286ca498197b062179dd1c9d
     {
         return new Twig_Source("{% extends '@App/layout.html.twig' %}
 
-{% block title %}PROFIL FORNISSEUR{% endblock %}
+{% block title %}PROFIL{% endblock %}
 {% block body %}
     {{ form(form) }}
 {% endblock %}", "@App/Pharmacy/add_pharmacy.html.twig", "C:\\wamp64\\www\\PharmaCity-master-1\\src\\AppBundle\\Resources\\views\\Pharmacy\\add_pharmacy.html.twig");

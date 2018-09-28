@@ -10,6 +10,7 @@ class __TwigTemplate_dcf2d7e5d32872395e12bf01f25453ab022f3e3f85f5cb8e3c2ae83a605
         // line 163
         $this->parent = $this->loadTemplate("@App/layout.html.twig", "@App/Prescription/list_prescription_patient.html.twig", 163);
         $this->blocks = array(
+            'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
             'modal' => array($this, 'block_modal'),
             'javascripts' => array($this, 'block_javascripts'),
@@ -39,6 +40,24 @@ class __TwigTemplate_dcf2d7e5d32872395e12bf01f25453ab022f3e3f85f5cb8e3c2ae83a605
     }
 
     // line 164
+    public function block_title($context, array $blocks = array())
+    {
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+
+        echo "liste ordonnance patient";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 165
     public function block_body($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -47,10 +66,12 @@ class __TwigTemplate_dcf2d7e5d32872395e12bf01f25453ab022f3e3f85f5cb8e3c2ae83a605
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 165
-        echo "    ";
+        // line 166
+        echo "
+    ";
+        // line 167
         $this->displayBlock('modal', $context, $blocks);
-        // line 185
+        // line 187
         echo "    <div class=\"container list-container\">
         <h2>Liste des ordonances</h2>
         <nav class=\"navbar filter\">
@@ -63,20 +84,20 @@ class __TwigTemplate_dcf2d7e5d32872395e12bf01f25453ab022f3e3f85f5cb8e3c2ae83a605
                 </button>
                 <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
                     <a class=\"dropdown-item\" href=\"";
-        // line 196
+        // line 198
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("patient_prescriptions_by_status", array("status" => "canceled"));
         echo "\">Annulée</a>
                     ";
-        // line 198
+        // line 200
         echo "                    <a class=\"dropdown-item\" href=\"";
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("patient_prescriptions_by_status", array("status" => "delivred"));
         echo "\">En attente</a>
                     <a class=\"dropdown-item\" href=\"";
-        // line 199
+        // line 201
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("patient_prescriptions_by_status", array("status" => "pending"));
         echo "\">Non Confirmée</a>
                     <a class=\"dropdown-item\" href=\"";
-        // line 200
+        // line 202
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("patient_prescriptions_by_status", array("status" => "success"));
         echo "\">Confirmée</a>
                 </div>
@@ -86,7 +107,6 @@ class __TwigTemplate_dcf2d7e5d32872395e12bf01f25453ab022f3e3f85f5cb8e3c2ae83a605
             <thead>
             <tr>
                 <th scope=\"col\">Reference</th>
-                <th scope=\"col\">Patient</th>
                 <th scope=\"col\">Pharmacie</th>
                 <th scope=\"col\">Docteur</th>
                 <th scope=\"col\">Date d'ajout</th>
@@ -95,26 +115,20 @@ class __TwigTemplate_dcf2d7e5d32872395e12bf01f25453ab022f3e3f85f5cb8e3c2ae83a605
             </tr>
             </thead>
             ";
-        // line 216
+        // line 217
         if (($context["prescription"] ?? $this->getContext($context, "prescription"))) {
-            // line 217
+            // line 218
             echo "                <tbody>
                 ";
-            // line 218
+            // line 219
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($context["prescription"]);
             foreach ($context['_seq'] as $context["_key"] => $context["prescription"]) {
-                // line 219
+                // line 220
                 echo "                    <tr>
                         <th scope=\"row\">";
-                // line 220
-                echo twig_escape_filter($this->env, $this->getAttribute($context["prescription"], "reference", array()), "html", null, true);
-                echo "</th>
-                        <th>";
                 // line 221
-                echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($context["prescription"], "patient", array()), "user", array()), "firstName", array()), "html", null, true);
-                echo " ";
-                echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($context["prescription"], "patient", array()), "user", array()), "name", array()), "html", null, true);
+                echo twig_escape_filter($this->env, $this->getAttribute($context["prescription"], "reference", array()), "html", null, true);
                 echo "</th>
 
 
@@ -238,7 +252,7 @@ $context["prescription"], "status", array()) == "Confirmée")) {
 
     }
 
-    // line 165
+    // line 167
     public function block_modal($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -247,7 +261,7 @@ $context["prescription"], "status", array()) == "Confirmée")) {
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "modal"));
 
-        // line 166
+        // line 168
         echo "        <!-- Modal -->
         <div class=\"modal fade\" id=\"prescription\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalCenterTitle\" aria-hidden=\"true\">
             <div class=\"modal-dialog modal-dialog-centered\" role=\"document\">
@@ -349,7 +363,7 @@ $context["prescription"], "status", array()) == "Confirmée")) {
 
     public function getDebugInfo()
     {
-        return array (  299 => 272,  288 => 265,  279 => 264,  251 => 166,  242 => 165,  230 => 261,  226 => 259,  222 => 257,  213 => 254,  210 => 253,  204 => 251,  202 => 250,  197 => 249,  195 => 248,  190 => 247,  188 => 246,  183 => 245,  181 => 244,  175 => 242,  171 => 240,  163 => 238,  160 => 237,  154 => 235,  151 => 234,  144 => 231,  142 => 230,  139 => 229,  137 => 228,  132 => 227,  130 => 226,  125 => 225,  123 => 224,  115 => 221,  111 => 220,  108 => 219,  104 => 218,  101 => 217,  99 => 216,  80 => 200,  76 => 199,  71 => 198,  67 => 196,  54 => 185,  51 => 165,  42 => 164,  11 => 163,);
+        return array (  313 => 272,  302 => 265,  293 => 264,  265 => 168,  256 => 167,  244 => 261,  240 => 259,  236 => 257,  227 => 254,  224 => 253,  218 => 251,  216 => 250,  211 => 249,  209 => 248,  204 => 247,  202 => 246,  197 => 245,  195 => 244,  189 => 242,  185 => 240,  177 => 238,  174 => 237,  168 => 235,  165 => 234,  158 => 231,  156 => 230,  153 => 229,  151 => 228,  146 => 227,  144 => 226,  139 => 225,  137 => 224,  131 => 221,  128 => 220,  124 => 219,  121 => 218,  119 => 217,  101 => 202,  97 => 201,  92 => 200,  88 => 198,  75 => 187,  73 => 167,  70 => 166,  61 => 165,  43 => 164,  11 => 163,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -525,7 +539,9 @@ $context["prescription"], "status", array()) == "Confirmée")) {
 
 
 {% extends '@App/layout.html.twig' %}
+{% block title %}liste ordonnance patient{% endblock %}
 {% block body %}
+
     {% block modal %}
         <!-- Modal -->
         <div class=\"modal fade\" id=\"prescription\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalCenterTitle\" aria-hidden=\"true\">
@@ -569,7 +585,6 @@ $context["prescription"], "status", array()) == "Confirmée")) {
             <thead>
             <tr>
                 <th scope=\"col\">Reference</th>
-                <th scope=\"col\">Patient</th>
                 <th scope=\"col\">Pharmacie</th>
                 <th scope=\"col\">Docteur</th>
                 <th scope=\"col\">Date d'ajout</th>
@@ -582,7 +597,6 @@ $context["prescription"], "status", array()) == "Confirmée")) {
                 {% for prescription in prescription %}
                     <tr>
                         <th scope=\"row\">{{ prescription.reference }}</th>
-                        <th>{{ prescription.patient.user.firstName }} {{ prescription.patient.user.name }}</th>
 
 
                             {% if prescription.status == \"Non confirmée\" %}

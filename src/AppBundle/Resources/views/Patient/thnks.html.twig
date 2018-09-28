@@ -16,9 +16,9 @@
             <h2>Commander Des Medicaments</h2>
 
             {{ form(form) }}
-            <a href="{{ path('Cancel_Order',{'id':id}) }}">cancel</a>
+            <a href="{{ path('Cancel_Order',{'id':id}) }}" class="style-button-order">Annulée</a>
             <br>
-            <a href="{{ path('Send_Order_To_Pharmacy',{'id':id}) }}">send</a>
+            <a href="{{ path('Send_Order_To_Pharmacy',{'id':id}) }}" class="style-button-order">Choisir une pharmacie</a>
         </div>
     </div>
 {% endblock %}

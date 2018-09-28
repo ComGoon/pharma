@@ -161,7 +161,9 @@
 
 
 {% extends '@App/layout.html.twig' %}
+{% block title %}liste ordonnance patient{% endblock %}
 {% block body %}
+
     {% block modal %}
         <!-- Modal -->
         <div class="modal fade" id="prescription" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -205,7 +207,6 @@
             <thead>
             <tr>
                 <th scope="col">Reference</th>
-                <th scope="col">Patient</th>
                 <th scope="col">Pharmacie</th>
                 <th scope="col">Docteur</th>
                 <th scope="col">Date d'ajout</th>
@@ -218,7 +219,6 @@
                 {% for prescription in prescription %}
                     <tr>
                         <th scope="row">{{ prescription.reference }}</th>
-                        <th>{{ prescription.patient.user.firstName }} {{ prescription.patient.user.name }}</th>
 
 
                             {% if prescription.status == "Non confirmée" %}

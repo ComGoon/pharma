@@ -47,7 +47,7 @@ class __TwigTemplate_ca766729ddcf1cd351fd0a53aa840402b17857da60d864fe89a3df662b3
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Confirmation ordonance";
+        echo "liste médicaments pharmacy";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -292,7 +292,8 @@ class __TwigTemplate_ca766729ddcf1cd351fd0a53aa840402b17857da60d864fe89a3df662b3
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['prescriptionMedication'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 170
-        echo "    ";
+        echo "    </div>
+    ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -301,7 +302,7 @@ class __TwigTemplate_ca766729ddcf1cd351fd0a53aa840402b17857da60d864fe89a3df662b3
 
     }
 
-    // line 171
+    // line 172
     public function block_js($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -310,7 +311,7 @@ class __TwigTemplate_ca766729ddcf1cd351fd0a53aa840402b17857da60d864fe89a3df662b3
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "js"));
 
-        // line 172
+        // line 173
         echo "        <script type=\"text/javascript\">
             \$(document).ready(function ()
             {
@@ -347,7 +348,7 @@ class __TwigTemplate_ca766729ddcf1cd351fd0a53aa840402b17857da60d864fe89a3df662b3
                 });
             });
         </script>
-    </div>
+
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -369,7 +370,7 @@ class __TwigTemplate_ca766729ddcf1cd351fd0a53aa840402b17857da60d864fe89a3df662b3
 
     public function getDebugInfo()
     {
-        return array (  314 => 172,  305 => 171,  295 => 170,  281 => 169,  278 => 168,  271 => 165,  268 => 164,  265 => 163,  247 => 162,  233 => 161,  230 => 160,  223 => 157,  220 => 156,  217 => 155,  200 => 154,  196 => 152,  188 => 149,  180 => 144,  174 => 140,  171 => 139,  163 => 134,  157 => 130,  155 => 129,  152 => 128,  146 => 126,  144 => 125,  137 => 121,  132 => 119,  128 => 117,  124 => 116,  112 => 106,  98 => 105,  92 => 103,  89 => 102,  72 => 101,  69 => 100,  60 => 99,  42 => 97,  11 => 96,);
+        return array (  315 => 173,  306 => 172,  295 => 170,  281 => 169,  278 => 168,  271 => 165,  268 => 164,  265 => 163,  247 => 162,  233 => 161,  230 => 160,  223 => 157,  220 => 156,  217 => 155,  200 => 154,  196 => 152,  188 => 149,  180 => 144,  174 => 140,  171 => 139,  163 => 134,  157 => 130,  155 => 129,  152 => 128,  146 => 126,  144 => 125,  137 => 121,  132 => 119,  128 => 117,  124 => 116,  112 => 106,  98 => 105,  92 => 103,  89 => 102,  72 => 101,  69 => 100,  60 => 99,  42 => 97,  11 => 96,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -478,7 +479,7 @@ class __TwigTemplate_ca766729ddcf1cd351fd0a53aa840402b17857da60d864fe89a3df662b3
 {#{% endblock %}#}
 
 {% extends '@App/layout.html.twig' %}
-{% block title %}Confirmation ordonance{% endblock %}
+{% block title %}liste médicaments pharmacy{% endblock %}
 
 {% block body %}
     <div class=\"col-lg-6 offset-5-lg\">
@@ -551,6 +552,7 @@ class __TwigTemplate_ca766729ddcf1cd351fd0a53aa840402b17857da60d864fe89a3df662b3
                 {% endif %}
             {% endif %}
         {% endfor %}
+    </div>
     {% endblock %}
     {% block js %}
         <script type=\"text/javascript\">
@@ -589,7 +591,7 @@ class __TwigTemplate_ca766729ddcf1cd351fd0a53aa840402b17857da60d864fe89a3df662b3
                 });
             });
         </script>
-    </div>
+
 {% endblock %}
 ", "@App/Prescription/list_prescription_medication_pharmacy.html.twig", "C:\\wamp64\\www\\PharmaCity-master-1\\src\\AppBundle\\Resources\\views\\Prescription\\list_prescription_medication_pharmacy.html.twig");
     }

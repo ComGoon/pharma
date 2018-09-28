@@ -47,7 +47,7 @@ class __TwigTemplate_5d16d1fde9cfc89bd13930caa1587986ec7cde039fd097f1b61082c7f61
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        echo "AJOUT ORDONONCE";
+        echo "Liste médicaments";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -188,7 +188,7 @@ class __TwigTemplate_5d16d1fde9cfc89bd13930caa1587986ec7cde039fd097f1b61082c7f61
     public function getSourceContext()
     {
         return new Twig_Source("{% extends '@App/layout.html.twig' %}
-{% block title %}AJOUT ORDONONCE{% endblock %}
+{% block title %}Liste médicaments{% endblock %}
 
 {% block body %}
 
