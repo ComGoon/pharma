@@ -1,0 +1,64 @@
+{% extends '@App/layout.html.twig' %}
+
+{% block title %}Stock{% endblock %}
+
+{% block body %}
+    {#{{ dump(stock) }}#}
+
+    {% if stock[0] is defined and stock[0] is  not null %}
+        <h1>{{ stock[0].pharmacies.namePharmacy}}</h1>
+        <h2>{{ stock[0].pharmacies.openingTime}}</h2>
+    <table class="table table-light table-bordered table-striped">
+    <tr>
+        <th style="text-align: center">Designation</th>
+        <th style="text-align: center">Description</th>
+        <th style="text-align: center">Fabricant</th>
+        <th style="text-align: center">Prix</th>
+        <th style="text-align: center">Quantité</th>
+        <th style="text-align: center" width="10%">Mettre à jour</th>
+    </tr>
+        {#{{ dump(stock) }}#}
+        {#{{ dump(stock[0]) }}#}
+    {% for pharmacyStock in stock %}
+        <tr>
+            <td width="15%" style="text-align: center"">{{ pharmacyStock.medications.name}}</td>
+            <td width="30%" >{{ pharmacyStock.medications.description}}</td>
+            <td width="10%" style="text-align: center">{{ pharmacyStock.medications.manufacturer}}</td>
+            <td style="text-align: center">{{ pharmacyStock.price}} DT</td>
+            <td style="text-align: center">{{ pharmacyStock.quantity }}   paquets</td>
+
+
+        <td style="text-align: center">
+        <div>
+            <a href="{{ path('stock_pharmacy_update',{'StockID':pharmacyStock.id,'PharmacyID':pharmacyStock.pharmacies.id,'MedicationID':pharmacyStock.medications.id}) }}"><p class="lnr lnr-redo" style="font-weight:bold;color: #1c7430;font-size: 20px;text-align: center"></p></a>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Mettre à jour</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div></td>
+        </tr>
+    {% endfor %}
+    </table>
+    {% else %}
+        <h2>Pas de medicaments dans votre stock</h2>
+    {% endif %}
+        <a href="{{ path('stock_pharmacy_add',{'PharmacyID':id}) }}">add</a>
+
+    {#{{ dump(stock[0]) }}#}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends '@App/layout.html.twig' %}
+
+{% block title %}Commander Des Medicaments{% endblock %}
+{% block titlebody %}
+{% endblock %}
+{% block body %}
+    <div class="row" >
+
+        <div class=" col-lg-4 ">
+            <h2>Envoyer la liste des médicaments</h2>
+
+            {{ form(form) }}
+            {#<a href="{{ path('Cancel_Order',{'id':id}) }}">cancel</a>#}
+            {#<br>#}
+            {#<a href="{{ path('Send_Order_To_Pharmacy',{'id':id}) }}">send</a>#}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends '@App/layout.html.twig' %}
+{% block title %}AJOUT ORDONONCE{% endblock %}
+
+{% block body %}
+
+    {% if prescriptionMedicationAdded %}
+        <p class="text-right"><a href="{{ path('list_prescription_doctor') }}" class="btn btn-success">Terminer</a></p>
+    <h2>Médicament ajouté</h2>
+
+        <table class="table table-bordered table-striped table-condensed">
+            <thead>
+            <tr>
+                <th>Médicament</th>
+                <th>Quantité</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for prescriptionMedicationAdded  in prescriptionMedicationAdded  %}
+                <tr>
+                    <td>
+                        {{ prescriptionMedicationAdded .medication.name }}</td>
+                    <td>
+                        {{ prescriptionMedicationAdded .quantity }}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+    <h2>Ajouté des médicament</h2>
+    {{ form_start(form) }}
+    {{ form_errors(form) }}
+    {{ form_row(form.prescription) }}
+
+    {{ form_rest(form) }}
+    {{ form_end(form) }}
+{% endblock %}
+
+
+{% block js %}
+{% endblock %}

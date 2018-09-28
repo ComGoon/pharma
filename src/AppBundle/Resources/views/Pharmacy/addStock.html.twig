@@ -1,0 +1,16 @@
+{% extends '@App/layout.html.twig' %}
+
+{% block title %}Add{% endblock %}
+
+{% block body %}
+
+
+
+    <div class="row" >
+        <div class="offset-lg-4 col-lg-4 offset-4 ">
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}
