@@ -35,7 +35,7 @@ class __TwigTemplate_cdb1ec8b26dc1b8ad488ecf2082b63ceb3d33691b2a72bbeb1832e6d02b
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">
     <link rel=\"icon\" href=\"";
         // line 7
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("template/img/MainLogo.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("template/img/Pharmacity.svg"), "html", null, true);
         echo "\" type=\"image/png\">
     <title>";
         // line 8
@@ -55,7 +55,7 @@ class __TwigTemplate_cdb1ec8b26dc1b8ad488ecf2082b63ceb3d33691b2a72bbeb1832e6d02b
         // line 26
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("homepage");
         echo "\"><img src=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("template/img/MainLogo.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("template/img/Pharmacity.svg"), "html", null, true);
         echo "\"  alt=\"logo\" class=\"logo-name\"></a>
                     ";
         // line 27
@@ -189,7 +189,7 @@ class __TwigTemplate_cdb1ec8b26dc1b8ad488ecf2082b63ceb3d33691b2a72bbeb1832e6d02b
                         <li class=\"nav-item active\"><a class=\"nav-link\" href=\"";
         // line 76
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("homepage");
-        echo "\">Home</a></li>
+        echo "\">Accueil</a></li>
                         ";
         // line 77
         if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_USER")) {
@@ -687,7 +687,7 @@ class __TwigTemplate_cdb1ec8b26dc1b8ad488ecf2082b63ceb3d33691b2a72bbeb1832e6d02b
     <!-- Required meta tags -->
     <meta charset=\"utf-8\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">
-    <link rel=\"icon\" href=\"{{ asset('template/img/MainLogo.png') }}\" type=\"image/png\">
+    <link rel=\"icon\" href=\"{{ asset('template/img/Pharmacity.svg') }}\" type=\"image/png\">
     <title>{% block title %}PHARMACITY{% endblock %}</title>
     {% block stylesheets %}
     <link rel=\"stylesheet\" href=\"{{ asset('template/css/bootstrap.css') }}\">
@@ -706,7 +706,7 @@ class __TwigTemplate_cdb1ec8b26dc1b8ad488ecf2082b63ceb3d33691b2a72bbeb1832e6d02b
     <div class=\"main_menu\">
         <nav class=\"navbar navbar-expand-lg navbar-light\">
                 <div class=\"container\">
-                <a class=\"navbar-brand logo_h\" href=\"{{ path('homepage') }}\"><img src=\"{{ asset('template/img/MainLogo.png') }}\"  alt=\"logo\" class=\"logo-name\"></a>
+                <a class=\"navbar-brand logo_h\" href=\"{{ path('homepage') }}\"><img src=\"{{ asset('template/img/Pharmacity.svg') }}\"  alt=\"logo\" class=\"logo-name\"></a>
                     {% if is_granted(\"IS_AUTHENTICATED_REMEMBERED\") %}
                     <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#user\" aria-controls=\"user\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                         {% if app.user.media is defined and app.user.media is not null %}
@@ -756,7 +756,7 @@ class __TwigTemplate_cdb1ec8b26dc1b8ad488ecf2082b63ceb3d33691b2a72bbeb1832e6d02b
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class=\"collapse navbar-collapse col-lg-7\" id=\"navbarSupportedContent\">
                     <ul class=\"nav navbar-nav menu_nav ml-auto\">
-                        <li class=\"nav-item active\"><a class=\"nav-link\" href=\"{{ path('homepage') }}\">Home</a></li>
+                        <li class=\"nav-item active\"><a class=\"nav-link\" href=\"{{ path('homepage') }}\">Accueil</a></li>
                         {% if is_granted('ROLE_USER') %}
                         <li class=\"nav-item\"><a class=\"nav-link\" href=\"{{ path('list_prescription_patient') }}\">Mes Consultations</a></li>
                         {% endif %}

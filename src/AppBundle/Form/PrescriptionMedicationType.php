@@ -24,7 +24,8 @@ class PrescriptionMedicationType extends AbstractType
                              'choice_label'=>'reference',
                              'multiple'=>false,
                              'expanded'=>false,
-                             'label'=>'Référence de l\'ordonance : ',
+                             'attr'=>array('class'=>'reference-order'),
+                             'label'=>' ',
                              'query_builder' => function(PrescriptionRepository $pres) use ($reference) {
                              return $pres->getPrescriptionByReferenceQueryBuilder($reference);
                              }

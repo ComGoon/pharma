@@ -4318,3 +4318,12 @@ h6 {
   border: 1px solid #1c7430;
   color: #1c7430;
 }
+
+.reference-order{
+  display:none;
+  height: 0px;
+  width: 0px;
+}
+.logo-name{
+  height: 40px;
+}

@@ -47,7 +47,7 @@ class __TwigTemplate_6f08d0b9874ff7bdeb90f0793dd7b7fbd0949cf3bbe852aeed2ccc25a81
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Fiche Médical";
+        echo "Ajouter une ordonnance";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -125,7 +125,7 @@ class __TwigTemplate_6f08d0b9874ff7bdeb90f0793dd7b7fbd0949cf3bbe852aeed2ccc25a81
     {
         return new Twig_Source("{% extends '@App/layout.html.twig' %}
 
-{% block title %}Fiche Médical{% endblock %}
+{% block title %}Ajouter une ordonnance{% endblock %}
 {% block titlebody %}
     <h2>Créer une commande</h2>
 {% endblock %}

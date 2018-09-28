@@ -495,7 +495,7 @@ class PharmacyController extends Controller
 //            $medications=new Medication();
             $medicationID=$repo->findOneByName($MedicationName)->getId();
             $price=$form->get('prix')->getViewData();
-            $quantity=$form->get('quant')->getViewData();
+            $quantity=$form->get('Quantiter')->getViewData();
             $em=$this->getDoctrine()->getManager();
             $pharmacy=new Pharmacy();
             $Medication=new Medication();
@@ -507,7 +507,7 @@ class PharmacyController extends Controller
             $pharmacyStock->setQuantity($quantity);
 
             $Stock=$repoStock->findOneById($medicationID);
-            dump($Stock);
+//            dump($Stock);
 //            die();
             if ($Stock==null){
                 $em->persist($pharmacyStock);
