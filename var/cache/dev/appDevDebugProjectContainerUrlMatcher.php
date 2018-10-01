@@ -107,6 +107,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+        // gmcmap_default_index
+        if ('/map' === $pathinfo) {
+            return array (  '_controller' => 'GMCMapBundle\\Controller\\DefaultController::indexAction',  '_route' => 'gmcmap_default_index',);
+        }
+
         // homepage
         if ('' === $trimmedPathinfo) {
             $ret = array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);

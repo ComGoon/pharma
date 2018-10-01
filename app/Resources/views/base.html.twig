@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="{{ asset('template/img/Pharmacity.svg') }}" type="image/png">
+    <link rel="icon" href="{{ asset('template/img/Pharmacity.svg') }}" type="image/png" class="logo-name">
     <title>{% block title %}PHARMACITY{% endblock %}</title>
     {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('template/css/bootstrap.css') }}">
@@ -14,8 +14,8 @@
     {#<link rel="stylesheet" href="{{ asset('template/vendors/lightbox/simpleLightbox.css') }}">#}
     {#<link rel="stylesheet" href="{{ asset('template/vendors/nice-select/css/nice-select.css') }}">#}
     {#<link rel="stylesheet" href="{{ asset('template/vendors/animate-css/animate.css') }}">#}
-    <link rel="stylesheet" href="{{ asset('template/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('template/css/responsive.css') }}">
+        <link rel="stylesheet" href="{{ asset('template/css/responsive.css') }}">
+        <link rel="stylesheet" href="{{ asset('template/css/style.css') }}">
     {% endblock %}
 </head>
 <body>
@@ -174,7 +174,28 @@
             <div class="container">
                 <div class="banner_content text-center">
                     <h3><div class="MyTitle">CONSULTEZ VOTRE <span>PHARMACIE</span></div></h3>
-                    <p style="color: whitesmoke;font-size: 20px" class="desc_title">Achetez vos médicaments et consultez votre médecin préféré via notre site Web.</p>
+
+                    {#<p style="color: whitesmoke;font-size: 20px" class="desc_title">Achetez vos médicaments et consultez votre médecin préféré via notre site Web.</p>#}
+
+
+                    <div class="typing" style="display: flex; flex-direction: column; align-items: center; margin-top: 100px">
+                        <div style="display: flex; flex-direction: column; align-items: flex-start; margin: auto 50px">
+                        <p>
+                            Soyez en contact avec votre <span class="tw">docteur</span> ideal !
+                        </p>
+                        <p>
+                            Soyez en contact avec votre <span class="tw">Pharmacie</span> ideal !!
+                        </p>
+                        <p>
+                            Soyez en contact avec votre <span class="tw">fournisseur de medicament</span> ideal !!!
+                        </p>
+                        <p>
+                            Commandez vos <span class="tw">medicament</span> !!!!
+                        </p>
+                        </div>
+                    </div>
+
+
                     <a class="black_btn" href="{{ path('go_to_view') }}">Commencer</a>
                 </div>
             </div>
@@ -228,7 +249,7 @@
                 <div class="single-footer-widget contact_wd">
                     <h6 class="footer_title">Contactez nous</h6>
                     <p>Les berges de lac 1 Tunis-Tunisie</p>
-                    <a href="tel:01265325689746">+216-92 421 045</a>
+                    <a href="tel:01265325689746">+216-53 691 617</a>
                     {#<a href="tel:01265325689746">012-6532-568-9746</a>#}
                 </div>
             </div>
@@ -236,9 +257,9 @@
                 <div class="single-footer-widget">
                     <div class="row footer-bottom d-flex justify-content-between align-items-center">
                     <div class="footer-social">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="https://ne.linkedin.com/in/mahaman-madani-122016131"><i class="fa fa-facebook"></i></a>
+                        <a href="www.twitter.com/_comgoon"><i class="fa fa-twitter"></i></a>
+                        <a href=""><i class="fa fa-dribbble"></i></a>
                         <a href="#"><i class="fa fa-behance"></i></a>
                     </div>
                     </div>
